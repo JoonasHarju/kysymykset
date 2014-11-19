@@ -150,5 +150,36 @@ package
 			var v27d = "mus-ta";
 			
 		}
+		
+		public function valitseKysymys(var valittuKasvi:String)
+		{
+			var kasvi:String = valittuKasvi
+				
+			switch(kasvi)
+			{
+				case "Porkkana":
+					trace("Porkkana");
+					//lisää TextField
+					//Aseta tekstiksi oikea muuttuja
+					//näytä TextField
+				break;
+		
+				case "hello cat":
+				
+					trace("The man says hello cat");
+			
+				break;
+			
+				case "hello world":
+			
+					trace("The man says hello world");
+				
+				break;
+				
+				default:
+				
+					trace("None of the above were met");
+			}
+		}
 	}
 }

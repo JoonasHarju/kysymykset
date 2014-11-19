@@ -6,7 +6,7 @@ package
 	{
 		public function kysymys_ui()
 		{
-			
+			Kysymyskentta()
 		}
 	}
 }
