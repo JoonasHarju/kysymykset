@@ -1,14 +1,17 @@
 package
 {
+	import flash.display.MovieClip;
+	
 	import tekstit;
 	
-	public class Kysymyskentta
+	public class Kysymyskentta extends MovieClip
 	{
 		public var pelaajanValitsemaKasvi:String = "Porkkana";
 		
 		public function Kysymyskentta()
 		{
-			tekstit.valitseKysymys(pelaajanValitsemaKasvi)
+			var teksti:tekstit = new tekstit;
+			teksti.valitseKysymys(pelaajanValitsemaKasvi)
 		}
 	}
 }

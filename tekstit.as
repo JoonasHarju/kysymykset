@@ -1,7 +1,27 @@
 package
 {
-	public class tekstit
+	import flash.display.MovieClip;
+
+	public class tekstit extends MovieClip
 	{
+		//Porkkana
+		public var k1:String = "Mi-hin ryh-mään pork-ka-na kuu-luu?";
+		public var v1a:String = "Juu-rek-set";
+		public var v1b:String = "Vi-han-nek-set";
+		public var v1c:String = "He-del-mät";
+		public var v1d:String = "Mu-ku-la-kas-vit";
+		public var k2:String = "Min-kä vä-ri-nen pork-ka-na on?";
+		public var v2a:String = "Si-ni-nen";
+		public var v2b:String = "Mus-ta";
+		public var v2c:String = "O-rans-si";
+		public var v2d:String = "Pu-nai-nen";
+		public var k3:String = "Mis-sä pork-ka-nan syö-tä-vä o-sa kas-vaa";
+		public var v3a:String = "Maan al-la";
+		public var v3b:String = "Maan pin-nal-la";
+		public var v3c:String = "Pen-saas-sa";
+		public var v3d:String = "Puus-sa";
+		public var porkkanakysymys:Array = [k1, k2, k3]
+		
 		public function tekstit()
 		{
 			//Porkkana
@@ -151,35 +171,59 @@ package
 			
 		}
 		
-		public function valitseKysymys(var valittuKasvi:String)
+		public function valitseKysymys(valittuKasvi:String)
 		{
 			var kasvi:String = valittuKasvi
-				
+			var kysymysnakyma:kysymysui = new kysymysui;
+			
 			switch(kasvi)
 			{
 				case "Porkkana":
 					trace("Porkkana");
+					var kysymys:String;
+					var rnumero:int = randomRange(1,3)
+					trace("rnumero:" + rnumero);
+					//valitse random kysymys
+					if(rnumero == 1){
+							kysymys = k1;
+							trace("Kysymys: " + kysymys);
+					}else if(rnumero == 2){
+							kysymys = k2;
+							trace("Kysymys: " + kysymys);
+					}else{
+							kysymys = k3;
+							trace("Kysymys: " + kysymys);
+					}
+					
+					//tulosta kysymys kysymys-ui:lle
+					//kysymyslaatikko.text = kysymys
+					
 					//lisää TextField
 					//Aseta tekstiksi oikea muuttuja
 					//näytä TextField
-				break;
-		
+					break;
+				
 				case "hello cat":
-				
+					
 					trace("The man says hello cat");
-			
-				break;
-			
-				case "hello world":
-			
-					trace("The man says hello world");
+					
+					break;
 				
-				break;
+				case "hello world":
+					
+					trace("The man says hello world");
+					
+					break;
 				
 				default:
-				
+					
 					trace("None of the above were met");
 			}
+		}
+		
+		function randomRange(minNum:Number, maxNum:Number):Number 
+		{
+			return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
 		}
 	}
 }
