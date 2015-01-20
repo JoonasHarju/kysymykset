@@ -7,6 +7,7 @@
       <libraryPathEntry kind="1" linkType="1" path="${FLASHPRO_APPCONFIG}/ActionScript 3.0/libs"/>
       <libraryPathEntry kind="3" linkType="1" path="${FLASHPRO_APPCONFIG}/ActionScript 3.0/libs/11.0/textLayout.swc" useDefaultLinkType="false"/>
       <libraryPathEntry kind="1" linkType="1" path="${FLASHPRO_APPCONFIG}/ActionScript 3.0/FP11.4"/>
+      <libraryPathEntry kind="1" linkType="1" path="C:/Program Files (x86)/Adobe/Adobe Flash CS6/Common/Configuration/ActionScript 3.0/FP11.4"/>
     </libraryPath>
     <sourceAttachmentPath/>
   </compiler>

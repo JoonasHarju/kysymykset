@@ -2,7 +2,7 @@ package
 {
 	import flash.display.MovieClip;
 	
-	import tekstit;
+	//import tekstit.*;
 	
 	public class Kysymyskentta extends MovieClip
 	{
@@ -11,7 +11,10 @@ package
 		public function Kysymyskentta()
 		{
 			var teksti:tekstit = new tekstit;
-			teksti.valitseKysymys(pelaajanValitsemaKasvi)
+			var uusiKysymys:String = teksti.valitseKysymys(pelaajanValitsemaKasvi)
+			var kysymysUi:kysymysui = new kysymysui();
+			addChild(kysymysUi);
+			kysymys.text = uusiKysymys;
 		}
 	}
 }

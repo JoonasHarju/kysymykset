@@ -171,7 +171,7 @@ package
 			
 		}
 		
-		public function valitseKysymys(valittuKasvi:String)
+		public function valitseKysymys(valittuKasvi:String):String
 		{
 			var kasvi:String = valittuKasvi
 			var kysymysnakyma:kysymysui = new kysymysui;
@@ -194,6 +194,8 @@ package
 							kysymys = k3;
 							trace("Kysymys: " + kysymys);
 					}
+					
+					return kysymys;
 					
 					//tulosta kysymys kysymys-ui:lle
 					//kysymyslaatikko.text = kysymys
